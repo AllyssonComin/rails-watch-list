@@ -1,0 +1,9 @@
+<div class="container my-5">
+  <h1 class="text-center">Create a new list</h1>
+  <div class="w-50 m-auto">
+    <%= simple_form_for @list do |f| %>
+      <%= f.input :name %>
+      <%= f.button :submit, class: 'btn btn-success'%>
+    <% end %>
+  </div>
+</div>

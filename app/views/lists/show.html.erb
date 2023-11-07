@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <h1 class="text-center"><%= @list.name %></h1>
+
+
+  <% @bookmarks.each do |bookmark| %>
+    <div class='card p-3 mb-3'>
+      <div class='row'>
+        <div class='col-2'>
+          <%= image_tag(bookmark.movie.poster_url, size:"200x300") %>
+        </div>
+        <div class="col-8 d-flex flex-column justify-content-around">
+          <div class='row'>
+            <p class='col-2'>Title:</p><h4 class='col-10 font-weight-bold'><%=bookmark.movie.title %></h4>
+          </div>
+          <div class='row'>
+            <p class='col-2'>Overview:</p><h5 class='col-10'><%= bookmark.movie.overview %></h5>
+          </div>
+          <%# <div class=""> %>
+            <div class='row d-flex align_items-end'>
+              <p p class='col-2'>Comment:</p><p class='col-10 card ms-2 p-1 w-50'><%= bookmark.comment %></p>
+            </div>
+          <%# </div> %>
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <%= link_to "Delete",
+            bookmark_path(bookmark), class:"btn btn-danger",
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+          %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+
+  <%= link_to 'add a new movie', new_list_bookmark_path(@list), class:"btn btn-primary my-5" %>
+</div>
