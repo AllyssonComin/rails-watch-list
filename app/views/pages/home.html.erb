@@ -1,25 +1,26 @@
 <div class="row m-0">
-  <div class="col-6">
+  <div class="col-6 p-0">
     <div class="left-side">
       <div>
-        <h1 class="text-start">Hello everyone</h1>
+        <h1 class="text-start">Hey you</h1>
       </div>
       <div>
-        <h2 class="text-end">Welcome to Movie whatch list</h2>
+        <h2 class="text-end">Welcome to MovieTracker</h2>
       </div>
-      <p>MovieTracker é um aplicativo desenvolvido por um entusiasta de programação dedicado a criar e gerenciar listas de filmes assistidos. Este aplicativo é perfeito para todos os amantes de cinema que desejam acompanhar e organizar os filmes que assistiram ao longo do tempo.</p>
-    </div>
 
+      <div class="resume">
+      <p class="col-4"> <span class="first-letter">M</span>ovieTracker é um aplicativo desenvolvido por um entusiasta de programação dedicado a criar e gerenciar listas de filmes assistidos. Este aplicativo é perfeito para todos os amantes de cinema que desejam acompanhar e organizar os filmes que assistiram ao longo do tempo.</p>
+      </div>
+    </div>
+<span></span>
   </div>
   <div class="col-6 p-0">
     <div class="rigth-side">
-      <div class="">
-        <h1>
-          <%= link_to lists_path, class:"get-start" do %>
-            Get Start
-          <% end %>
-        </h1>
-      </div>
+      <h1>
+        <%= link_to new_user_session_path, class:"get-start" do %>
+          Get Start
+        <% end %>
+      </h1>
     </div>
   </div>
 </div>
